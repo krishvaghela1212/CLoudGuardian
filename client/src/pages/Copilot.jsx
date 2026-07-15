@@ -60,7 +60,7 @@ const Copilot = () => {
       <header className="bg-slate-800 border-b border-slate-700 p-4 sticky top-0 z-10">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center text-white">
-            <button 
+            <button
               onClick={() => navigate('/dashboard')}
               className="mr-4 text-slate-400 hover:text-white transition-colors"
             >
@@ -83,28 +83,26 @@ const Copilot = () => {
               <Bot className="w-16 h-16 text-slate-600 mx-auto mb-4" />
               <h2 className="text-xl font-semibold text-slate-300 mb-2">How can I help you optimize your cloud?</h2>
               <p className="text-slate-500 max-w-md mx-auto">
-                Ask me to generate Terraform, AWS CLI commands, explain costs, or find security risks based on your latest scan.
+                Ask me  generate Terraform, AWS CLI commands, explain costs, or find security risks based on your latest scan.
               </p>
             </div>
           )}
 
           {messages.map((msg, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div className={`flex max-w-[85%] sm:max-w-[75%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                <div className={`flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center ${
-                  msg.role === 'user' ? 'bg-indigo-600 ml-3' : 'bg-slate-700 mr-3'
-                }`}>
+                <div className={`flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center ${msg.role === 'user' ? 'bg-indigo-600 ml-3' : 'bg-slate-700 mr-3'
+                  }`}>
                   {msg.role === 'user' ? <User className="w-5 h-5 text-white" /> : <Bot className="w-5 h-5 text-indigo-300" />}
                 </div>
-                
-                <div className={`px-4 py-3 rounded-2xl ${
-                  msg.role === 'user' 
-                    ? 'bg-indigo-600 text-white rounded-tr-sm' 
+
+                <div className={`px-4 py-3 rounded-2xl ${msg.role === 'user'
+                    ? 'bg-indigo-600 text-white rounded-tr-sm'
                     : 'bg-slate-800 border border-slate-700 text-slate-200 rounded-tl-sm'
-                }`}>
+                  }`}>
                   <div className="whitespace-pre-wrap leading-relaxed text-[15px]">
                     {msg.content}
                   </div>
