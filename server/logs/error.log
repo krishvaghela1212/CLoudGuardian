@@ -1,0 +1,164 @@
+2026-07-12 22:51:31 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 22:51:31 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 22:51:32 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 22:51:32 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 22:51:32 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 22:53:17 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 22:53:17 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 22:53:17 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 22:53:17 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 22:54:54 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 22:54:54 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 22:54:54 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 22:54:54 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 22:55:23 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 22:55:23 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 22:55:23 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 22:55:23 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 22:57:07 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 22:57:07 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 22:57:07 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 22:57:07 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 23:01:07 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 23:01:07 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 23:01:08 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 23:01:08 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 23:01:08 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 23:15:11 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 23:15:11 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 23:15:11 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 23:15:11 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 23:17:33 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 23:17:33 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 23:17:33 [[31merror[39m]: Gemini Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 23:17:33 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 23:41:14 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 23:41:14 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 23:41:18 [[31merror[39m]: [OpenAI Service] Analysis failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+2026-07-12 23:41:18 [[31merror[39m]: AI Analysis failed: Failed to analyze infrastructure data with OpenAI API.
+2026-07-12 23:41:18 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 23:53:58 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 23:53:58 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 23:53:59 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [401 Unauthorized] Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent","service":"generativelanguage.googleapis.com"}}]
+2026-07-12 23:53:59 [[31merror[39m]: AI Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 23:53:59 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-12 23:55:56 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-12 23:55:56 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-12 23:55:57 [[31merror[39m]: [Gemini Service] Analysis failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [400 Bad Request] API key not valid. Please pass a valid API key. [{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"API_KEY_INVALID","domain":"googleapis.com","metadata":{"service":"generativelanguage.googleapis.com"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"API key not valid. Please pass a valid API key."}]
+2026-07-12 23:55:57 [[31merror[39m]: AI Analysis failed: Failed to analyze infrastructure data with Gemini API.
+2026-07-12 23:55:57 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-13 09:10:57 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-13 09:10:57 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-13 09:10:58 [[31merror[39m]: [Groq Service] Analysis failed: 401 Invalid API Key
+2026-07-13 09:10:58 [[31merror[39m]: AI Analysis failed: Failed to analyze infrastructure data with Groq API.
+2026-07-13 09:10:58 [[31merror[39m]: ScannerService error: AI Analysis failed.
+2026-07-13 09:22:09 [[31merror[39m]: [EC2 Service] getEC2Instances failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: Scan EC2 failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: [S3 Service] getS3Buckets failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: Scan S3 failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: [RDS Service] getRDSInstances failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: Scan RDS failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: [Lambda Service] getLambdaFunctions failed: Resolved credential object is not valid
+2026-07-13 09:22:09 [[31merror[39m]: Scan Lambda failed: Resolved credential object is not valid
+2026-07-14 11:07:26 [[31merror[39m]: AssumeRole failed
+2026-07-14 11:07:26 [[31merror[39m]: ScannerService error: Failed to assume role "arn:aws:iam::456051252825:role/CloudGuardianReadOnlyRole": Resolved credential object is not valid
+2026-07-14 11:17:54 [[31merror[39m]: AssumeRole failed
+2026-07-14 11:17:54 [[31merror[39m]: ScannerService error: Failed to assume role "arn:aws:iam::456051252825:role/CloudGuardianReadOnlyRole": Resolved credential object is not valid
+2026-07-14 11:19:34 [[31merror[39m]: AssumeRole failed
+2026-07-14 11:19:34 [[31merror[39m]: ScannerService error: Failed to assume role "arn:aws:iam::456051252825:role/CloudGuardianReadOnlyRole": Resolved credential object is not valid
+2026-07-14 11:23:28 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784008405013 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-14 11:23:28 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784008405013 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 18:06:32 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784118991216 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 18:06:32 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784118991216 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 18:06:33 [[31merror[39m]: Failed to save report: Report validation failed: aiAnalysis.summary: Cast to string failed for value "{
+  totalFindings: 0,
+  totalEstimatedSavings: 0,
+  findingsByService: {},
+  findingsBySeverity: {}
+}" (type Object) at path "aiAnalysis.summary"
+2026-07-15 18:08:36 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784119115361 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 18:08:36 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784119115361 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 18:11:44 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784119303944 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 18:11:44 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784119303944 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 19:17:33 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784123252512 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 19:17:33 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784123252512 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 19:20:45 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784123444997 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-07-15 19:20:45 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1784123444997 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
