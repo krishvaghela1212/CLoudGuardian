@@ -1,0 +1,15 @@
+2026-07-13 11:02:18 [[31merror[39m]: Role ARN validation failed
+2026-07-13 11:02:18 [[31merror[39m]: Role ARN validation failed
+2026-07-13 11:02:18 [[31merror[39m]: Role ARN validation failed
+2026-07-13 11:02:18 [[31merror[39m]: AssumeRole failed
+2026-07-15 17:06:30 [[31merror[39m]: Error: Simulated failure
+    at Object.evaluate ([eval]:42:32)
+    at RuleEngine.evaluate (E:\CloudGuardian\cloudguardian-ai\server\src\modules\finops\engine\RuleEngine.js:89:32)
+    at [eval]:60:23
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:449:12
+    at [eval]-wrapper:6:24
+    at runScriptInContext (node:internal/process/execution:447:60)
+    at evalFunction (node:internal/process/execution:87:30)
+    at evalScript (node:internal/process/execution:99:3)
+    at node:internal/main/eval_string:74:3

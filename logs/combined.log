@@ -1,0 +1,26 @@
+2026-07-13 11:02:18 [[31merror[39m]: Role ARN validation failed
+2026-07-13 11:02:18 [[31merror[39m]: Role ARN validation failed
+2026-07-13 11:02:18 [[31merror[39m]: Role ARN validation failed
+2026-07-13 11:02:18 [[32minfo[39m]: Assuming IAM role
+2026-07-13 11:02:18 [[31merror[39m]: AssumeRole failed
+2026-07-15 17:06:11 [[32minfo[39m]: [RuleEngine] 0 rules loaded successfully
+2026-07-15 17:06:30 [[31merror[39m]: Error: Simulated failure
+    at Object.evaluate ([eval]:42:32)
+    at RuleEngine.evaluate (E:\CloudGuardian\cloudguardian-ai\server\src\modules\finops\engine\RuleEngine.js:89:32)
+    at [eval]:60:23
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:449:12
+    at [eval]-wrapper:6:24
+    at runScriptInContext (node:internal/process/execution:447:60)
+    at evalFunction (node:internal/process/execution:87:30)
+    at evalScript (node:internal/process/execution:99:3)
+    at node:internal/main/eval_string:74:3
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: CW_LONG_RETENTION
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: EBS_UNATTACHED
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: EC2_LOW_CPU
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: EC2_STOPPED
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: EIP_UNUSED
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: LAMBDA_UNUSED
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: RDS_OVERSIZED
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] Loaded rule: S3_NO_LIFECYCLE
+2026-07-15 17:30:54 [[32minfo[39m]: [RuleEngine] 8 rules loaded successfully
