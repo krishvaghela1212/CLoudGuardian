@@ -31,40 +31,72 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="flex justify-center">
-          <div className="bg-indigo-600 p-3 rounded-xl shadow-lg shadow-indigo-500/30">
-            <Shield className="h-10 w-10 text-white" />
+    <div className="min-h-screen flex" style={{ background: 'var(--color-background)' }}>
+      {/* Left Panel – Decorative */}
+      <div className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12" style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 60%, #047857 100%)' }}>
+        <div className="flex items-center space-x-3">
+          <div className="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
+            <Shield className="h-7 w-7 text-white" />
+          </div>
+          <span className="text-white font-bold text-xl tracking-tight">CloudGuardian AI</span>
+        </div>
+
+        <div>
+          <h1 className="text-4xl font-extrabold text-white leading-tight mb-4">
+            Start optimizing<br />your cloud today.
+          </h1>
+          <p className="text-emerald-100 text-lg leading-relaxed">
+            Join thousands of engineers and FinOps teams who trust CloudGuardian AI to reduce AWS costs and improve cloud security.
+          </p>
+
+          <div className="mt-10 space-y-4">
+            {['Real-time Cloud Scanning', 'AI-Generated Remediation', 'MongoDB-backed History'].map((f) => (
+              <div key={f} className="flex items-center space-x-3">
+                <div className="w-2 h-2 rounded-full bg-white" />
+                <span className="text-white font-medium">{f}</span>
+              </div>
+            ))}
           </div>
         </div>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-white tracking-tight">
-          Create your account
-        </h2>
-        <p className="mt-2 text-center text-sm text-slate-400">
-          Already have an account?{' '}
-          <Link to="/login" className="font-medium text-indigo-400 hover:text-indigo-300 transition-colors">
-            Sign in instead
-          </Link>
-        </p>
+
+        <p className="text-emerald-200 text-sm">&copy; {new Date().getFullYear()} CloudGuardian AI</p>
       </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-slate-800 py-8 px-4 shadow sm:rounded-2xl sm:px-10 border border-slate-700 backdrop-blur-sm">
+      {/* Right Panel – Form */}
+      <div className="flex flex-1 flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-28">
+        <div className="w-full max-w-md mx-auto">
+          {/* Mobile logo */}
+          <div className="flex lg:hidden items-center space-x-2 mb-10">
+            <div className="p-2 rounded-xl" style={{ background: 'var(--color-primary)' }}>
+              <Shield className="h-6 w-6 text-white" />
+            </div>
+            <span className="font-bold text-xl" style={{ color: 'var(--color-text)' }}>CloudGuardian AI</span>
+          </div>
+
+          <h2 className="text-3xl font-extrabold tracking-tight mb-2" style={{ color: 'var(--color-text)' }}>
+            Create your account
+          </h2>
+          <p className="text-sm mb-8" style={{ color: 'var(--color-muted)' }}>
+            Already have an account?{' '}
+            <Link to="/login" className="font-semibold hover:underline" style={{ color: 'var(--color-primary)' }}>
+              Sign in instead
+            </Link>
+          </p>
+
           {error && (
-            <div className="mb-4 bg-red-500/10 border border-red-500/50 p-4 rounded-lg flex items-center text-red-400 text-sm">
+            <div className="mb-6 p-4 rounded-xl text-sm" style={{ background: '#FEF2F2', border: '1px solid #FECACA', color: '#DC2626' }}>
               {error}
             </div>
           )}
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="fullName" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="fullName" className="block text-sm font-semibold mb-1.5" style={{ color: 'var(--color-text)' }}>
                 Full Name
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-slate-500" />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                  <User className="h-4 w-4" style={{ color: 'var(--color-muted)' }} />
                 </div>
                 <input
                   id="fullName"
@@ -73,19 +105,22 @@ const Register = () => {
                   required
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-slate-600 rounded-lg leading-5 bg-slate-700/50 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors"
+                  className="block w-full pl-10 pr-4 py-3 rounded-xl text-sm transition-all outline-none"
+                  style={{ background: 'var(--color-surface)', border: '1.5px solid var(--color-muted)', color: 'var(--color-text)' }}
+                  onFocus={e => e.target.style.borderColor = 'var(--color-primary)'}
+                  onBlur={e => e.target.style.borderColor = 'var(--color-muted)'}
                   placeholder="John Doe"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="email" className="block text-sm font-semibold mb-1.5" style={{ color: 'var(--color-text)' }}>
                 Email address
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-slate-500" />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                  <Mail className="h-4 w-4" style={{ color: 'var(--color-muted)' }} />
                 </div>
                 <input
                   id="email"
@@ -95,19 +130,22 @@ const Register = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-slate-600 rounded-lg leading-5 bg-slate-700/50 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors"
+                  className="block w-full pl-10 pr-4 py-3 rounded-xl text-sm transition-all outline-none"
+                  style={{ background: 'var(--color-surface)', border: '1.5px solid var(--color-muted)', color: 'var(--color-text)' }}
+                  onFocus={e => e.target.style.borderColor = 'var(--color-primary)'}
+                  onBlur={e => e.target.style.borderColor = 'var(--color-muted)'}
                   placeholder="you@example.com"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="password" className="block text-sm font-semibold mb-1.5" style={{ color: 'var(--color-text)' }}>
                 Password
               </label>
-              <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-slate-500" />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                  <Lock className="h-4 w-4" style={{ color: 'var(--color-muted)' }} />
                 </div>
                 <input
                   id="password"
@@ -117,22 +155,24 @@ const Register = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-slate-600 rounded-lg leading-5 bg-slate-700/50 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors"
+                  className="block w-full pl-10 pr-4 py-3 rounded-xl text-sm transition-all outline-none"
+                  style={{ background: 'var(--color-surface)', border: '1.5px solid var(--color-muted)', color: 'var(--color-text)' }}
+                  onFocus={e => e.target.style.borderColor = 'var(--color-primary)'}
+                  onBlur={e => e.target.style.borderColor = 'var(--color-muted)'}
                   placeholder="••••••••"
                   minLength={6}
                 />
               </div>
             </div>
 
-            <div>
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-              >
-                {loading ? 'Creating account...' : 'Create account'}
-              </button>
-            </div>
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-3 px-4 rounded-xl font-semibold text-sm text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed mt-2 shadow-md"
+              style={{ background: loading ? 'var(--color-muted)' : 'var(--color-primary)' }}
+            >
+              {loading ? 'Creating account...' : 'Create account'}
+            </button>
           </form>
         </div>
       </div>

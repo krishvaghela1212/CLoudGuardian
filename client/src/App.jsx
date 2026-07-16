@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Scanner from './pages/Scanner';
 import Copilot from './pages/Copilot';
+import CloudConnections from './pages/CloudConnections';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const LandingPage = lazy(() => import('./pages/Landing/index'));
@@ -15,13 +16,13 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/" element={<Navigate to="/landing" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
             path="/landing"
             element={
-              <Suspense fallback={<div className="min-h-screen bg-[#0B0F14] flex items-center justify-center"><div className="w-10 h-10 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div></div>}>
+              <Suspense fallback={<div className="min-h-screen bg-background flex items-center justify-center"><div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div></div>}>
                 <LandingPage />
               </Suspense>
             }
@@ -53,8 +54,17 @@ function App() {
               </ProtectedRoute>
             } 
           />
+
+          <Route 
+            path="/connections" 
+            element={
+              <ProtectedRoute>
+                <CloudConnections />
+              </ProtectedRoute>
+            } 
+          />
           
-          <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<Navigate to="/landing" replace />} />
         </Routes>
       </Router>
     </AuthProvider>

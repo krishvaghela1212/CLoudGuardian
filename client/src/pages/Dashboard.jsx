@@ -126,13 +126,13 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white font-sans selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-background text-text font-sans selection:bg-primary/30">
       {/* Navbar */}
-      <nav className="bg-slate-800/80 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50">
+      <nav className="bg-surface/80 backdrop-blur-md border-b border-muted/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Shield className="h-8 w-8 text-indigo-500" />
+              <Shield className="h-8 w-8 text-primary" />
               <span className="ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400 tracking-tight">
                 CloudGuardian AI
               </span>
@@ -140,26 +140,26 @@ const Dashboard = () => {
             <div className="flex items-center space-x-3 sm:space-x-4">
               <button
                 onClick={() => navigate('/copilot')}
-                className="hidden sm:inline-flex items-center px-3 py-2 bg-slate-700/50 hover:bg-slate-700 text-slate-300 rounded-lg text-sm font-medium transition-colors"
+                className="hidden sm:inline-flex items-center px-3 py-2 bg-muted/10/50 hover:bg-muted/10 text-muted rounded-lg text-sm font-medium transition-colors"
               >
-                <Bot className="h-4 w-4 mr-2 text-indigo-400" />
+                <Bot className="h-4 w-4 mr-2 text-secondary" />
                 Copilot
               </button>
               <button
                 onClick={() => navigate('/scanner')}
-                className="hidden sm:inline-flex items-center px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium shadow-lg shadow-indigo-500/20 transition-colors"
+                className="hidden sm:inline-flex items-center px-3 py-2 bg-primary hover:bg-accent text-text rounded-lg text-sm font-medium shadow-lg shadow-primary/20 transition-colors"
               >
                 <Activity className="h-4 w-4 mr-2" />
                 New Scan
               </button>
-              <div className="h-6 w-px bg-slate-700 hidden sm:block mx-2"></div>
-              <div className="flex items-center text-slate-300">
+              <div className="h-6 w-px bg-muted/10 hidden sm:block mx-2"></div>
+              <div className="flex items-center text-muted">
                 <UserIcon className="h-5 w-5 mr-2" />
                 <span className="font-medium text-sm hidden sm:block">{user?.fullName}</span>
               </div>
               <button
                 onClick={handleLogout}
-                className="text-slate-400 hover:text-white transition-colors p-2"
+                className="text-muted hover:text-text transition-colors p-2"
                 title="Logout"
               >
                 <LogOut className="h-5 w-5" />
@@ -174,8 +174,8 @@ const Dashboard = () => {
         
         {loading ? (
           <div className="flex flex-col items-center justify-center h-64 space-y-4">
-            <div className="w-10 h-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
-            <p className="text-slate-400 font-medium">Loading Dashboard Data...</p>
+            <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <p className="text-muted font-medium">Loading Dashboard Data...</p>
           </div>
         ) : error ? (
           <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 text-center">
@@ -183,15 +183,15 @@ const Dashboard = () => {
             <p className="text-red-400 font-medium">{error}</p>
           </div>
         ) : !report ? (
-          <div className="bg-slate-800 rounded-2xl border border-slate-700 p-12 text-center shadow-xl">
+          <div className="bg-surface rounded-2xl border border-muted/20 p-12 text-center shadow-xl">
             <Shield className="w-16 h-16 text-slate-600 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-white mb-2">Welcome to CloudGuardian AI</h2>
-            <p className="text-slate-400 max-w-md mx-auto mb-8">
+            <h2 className="text-2xl font-bold text-text mb-2">Welcome to CloudGuardian AI</h2>
+            <p className="text-muted max-w-md mx-auto mb-8">
               It looks like you haven't run any AWS scans yet. Run your first scan to generate an AI-powered dashboard of your cloud infrastructure.
             </p>
             <button
               onClick={() => navigate('/scanner')}
-              className="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium shadow-lg shadow-indigo-500/20 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-accent text-text rounded-xl font-medium shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5"
             >
               <Activity className="w-5 h-5 mr-2" />
               Run Your First Scan
@@ -202,17 +202,17 @@ const Dashboard = () => {
             {/* Dashboard Header Actions */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <h1 className="text-2xl font-bold text-white">Infrastructure Overview</h1>
-                <p className="text-slate-400 text-sm mt-1">
+                <h1 className="text-2xl font-bold text-text">Infrastructure Overview</h1>
+                <p className="text-muted text-sm mt-1">
                   Last scanned on {new Date(report.createdAt).toLocaleString()}
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <button
                   onClick={downloadPDF}
-                  className="inline-flex items-center px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-lg text-sm font-medium transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-surface hover:bg-muted/10 border border-muted/20 text-text rounded-lg text-sm font-medium transition-colors"
                 >
-                  <Download className="w-4 h-4 mr-2 text-slate-400" />
+                  <Download className="w-4 h-4 mr-2 text-muted" />
                   Export PDF
                 </button>
               </div>
@@ -221,63 +221,63 @@ const Dashboard = () => {
             {/* KPI Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {/* Total Resources */}
-              <div className="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
-                <div className="absolute -right-4 -top-4 w-24 h-24 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-colors" />
+              <div className="bg-surface/80 backdrop-blur border border-muted/20 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+                <div className="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
                 <div className="flex justify-between items-start mb-4 relative">
-                  <div className="p-2 bg-indigo-500/20 rounded-lg">
-                    <Database className="w-5 h-5 text-indigo-400" />
+                  <div className="p-2 bg-primary/20 rounded-lg">
+                    <Database className="w-5 h-5 text-secondary" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-white relative">{counts.total}</h3>
-                <p className="text-slate-400 text-sm font-medium mt-1 relative">Total Resources Found</p>
+                <h3 className="text-3xl font-bold text-text relative">{counts.total}</h3>
+                <p className="text-muted text-sm font-medium mt-1 relative">Total Resources Found</p>
               </div>
 
               {/* Savings */}
-              <div className="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+              <div className="bg-surface/80 backdrop-blur border border-muted/20 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-colors" />
                 <div className="flex justify-between items-start mb-4 relative">
                   <div className="p-2 bg-emerald-500/20 rounded-lg">
                     <DollarSign className="w-5 h-5 text-emerald-400" />
                   </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white relative line-clamp-1">{savingsDisplay}</h3>
-                <p className="text-slate-400 text-sm font-medium mt-1 relative">Est. Cost Reduction</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-text relative line-clamp-1">{savingsDisplay}</h3>
+                <p className="text-muted text-sm font-medium mt-1 relative">Est. Cost Reduction</p>
               </div>
 
               {/* Critical Findings */}
-              <div className="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+              <div className="bg-surface/80 backdrop-blur border border-muted/20 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-colors" />
                 <div className="flex justify-between items-start mb-4 relative">
                   <div className="p-2 bg-red-500/20 rounded-lg">
                     <AlertTriangle className="w-5 h-5 text-red-400" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-white relative">{highPriorityCount}</h3>
-                <p className="text-slate-400 text-sm font-medium mt-1 relative">High Priority Issues</p>
+                <h3 className="text-3xl font-bold text-text relative">{highPriorityCount}</h3>
+                <p className="text-muted text-sm font-medium mt-1 relative">High Priority Issues</p>
               </div>
 
               {/* Health Score (Simulated based on findings) */}
-              <div className="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
+              <div className="bg-surface/80 backdrop-blur border border-muted/20 rounded-2xl p-5 shadow-lg relative overflow-hidden group">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-colors" />
                 <div className="flex justify-between items-start mb-4 relative">
                   <div className="p-2 bg-blue-500/20 rounded-lg">
                     <Activity className="w-5 h-5 text-blue-400" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-white relative">
+                <h3 className="text-3xl font-bold text-text relative">
                   {Math.max(0, 100 - highPriorityCount * 10 - mediumPriorityCount * 5)}%
                 </h3>
-                <p className="text-slate-400 text-sm font-medium mt-1 relative">Cloud Health Score</p>
+                <p className="text-muted text-sm font-medium mt-1 relative">Cloud Health Score</p>
               </div>
             </div>
 
             {/* AI Summary Banner */}
-            <div className="bg-gradient-to-br from-indigo-900/40 to-slate-800/40 border border-indigo-500/20 rounded-2xl p-6 lg:p-8 shadow-inner">
+            <div className="bg-gradient-to-br from-primary/20/40 to-slate-800/40 border border-primary/20 rounded-2xl p-6 lg:p-8 shadow-inner">
               <div className="flex items-start">
-                <Bot className="w-6 h-6 text-indigo-400 mr-4 mt-1 flex-shrink-0" />
+                <Bot className="w-6 h-6 text-secondary mr-4 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Infrastructure Analysis Summary</h3>
-                  <p className="text-slate-300 leading-relaxed">
+                  <h3 className="text-lg font-semibold text-text mb-2">Infrastructure Analysis Summary</h3>
+                  <p className="text-muted leading-relaxed">
                     {summaryText}
                   </p>
                 </div>
@@ -288,8 +288,8 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               
               {/* Resource Distribution */}
-              <div className="bg-slate-800 rounded-2xl border border-slate-700 p-6 shadow-lg">
-                <h3 className="text-lg font-semibold text-white mb-6">Resource Distribution</h3>
+              <div className="bg-surface rounded-2xl border border-muted/20 p-6 shadow-lg">
+                <h3 className="text-lg font-semibold text-text mb-6">Resource Distribution</h3>
                 <div className="h-64">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={resourceData} margin={{ top: 0, right: 0, left: -20, bottom: 0 }}>
@@ -311,8 +311,8 @@ const Dashboard = () => {
               </div>
 
               {/* Priority Severity Breakdown */}
-              <div className="bg-slate-800 rounded-2xl border border-slate-700 p-6 shadow-lg">
-                <h3 className="text-lg font-semibold text-white mb-6">Action Item Severity</h3>
+              <div className="bg-surface rounded-2xl border border-muted/20 p-6 shadow-lg">
+                <h3 className="text-lg font-semibold text-text mb-6">Action Item Severity</h3>
                 <div className="h-64 flex justify-center">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
@@ -341,7 +341,7 @@ const Dashboard = () => {
                   {priorityData.filter(d => d.name !== 'None').map((entry, index) => (
                     <div key={index} className="flex items-center">
                       <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: entry.color }}></div>
-                      <span className="text-sm text-slate-300">{entry.name} ({entry.value})</span>
+                      <span className="text-sm text-muted">{entry.name} ({entry.value})</span>
                     </div>
                   ))}
                 </div>
@@ -350,17 +350,17 @@ const Dashboard = () => {
 
             {/* Recommendations / Findings List */}
             {isRuleEngineReport && findings.length > 0 ? (
-              <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
-                <div className="p-6 border-b border-slate-700">
-                  <h3 className="text-lg font-semibold text-white">Cost Optimization Findings</h3>
+              <div className="bg-surface rounded-2xl border border-muted/20 overflow-hidden shadow-lg">
+                <div className="p-6 border-b border-muted/20">
+                  <h3 className="text-lg font-semibold text-text">Cost Optimization Findings</h3>
                 </div>
                 <div className="divide-y divide-slate-700">
                   {findings.map((finding, idx) => (
-                    <div key={idx} className="p-6 hover:bg-slate-700/30 transition-colors">
+                    <div key={idx} className="p-6 hover:bg-muted/10/30 transition-colors">
                       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                         <div>
                           <div className="flex items-center mb-2">
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mr-3">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-secondary border border-primary/30 mr-3">
                               {finding.service}
                             </span>
                             <span className={`text-xs font-semibold ${
@@ -370,8 +370,8 @@ const Dashboard = () => {
                               {finding.severity}
                             </span>
                           </div>
-                          <h4 className="text-white font-medium">{finding.name}: {finding.resourceName}</h4>
-                          <p className="text-slate-400 text-sm mt-1">{finding.recommendation}</p>
+                          <h4 className="text-text font-medium">{finding.name}: {finding.resourceName}</h4>
+                          <p className="text-muted text-sm mt-1">{finding.recommendation}</p>
                         </div>
                         {finding.estimatedMonthlySavings > 0 && (
                           <span className="text-emerald-400 font-semibold whitespace-nowrap">
@@ -384,17 +384,17 @@ const Dashboard = () => {
                 </div>
               </div>
             ) : ai.recommendations && ai.recommendations.length > 0 && (
-              <div className="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-lg">
-                <div className="p-6 border-b border-slate-700">
-                  <h3 className="text-lg font-semibold text-white">Top Recommendations</h3>
+              <div className="bg-surface rounded-2xl border border-muted/20 overflow-hidden shadow-lg">
+                <div className="p-6 border-b border-muted/20">
+                  <h3 className="text-lg font-semibold text-text">Top Recommendations</h3>
                 </div>
                 <div className="divide-y divide-slate-700">
                   {ai.recommendations.map((rec, idx) => (
-                    <div key={idx} className="p-6 hover:bg-slate-700/30 transition-colors">
+                    <div key={idx} className="p-6 hover:bg-muted/10/30 transition-colors">
                       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                         <div>
                           <div className="flex items-center mb-2">
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 mr-3">
+                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-secondary border border-primary/30 mr-3">
                               {rec.category}
                             </span>
                             <span className={`text-xs font-semibold ${
@@ -404,8 +404,8 @@ const Dashboard = () => {
                               {rec.impact} Impact
                             </span>
                           </div>
-                          <h4 className="text-white font-medium text-base mb-1">{rec.issue}</h4>
-                          <p className="text-slate-400 text-sm">{rec.solution}</p>
+                          <h4 className="text-text font-medium text-base mb-1">{rec.issue}</h4>
+                          <p className="text-muted text-sm">{rec.solution}</p>
                         </div>
                       </div>
                     </div>
