@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Shield, Mail, Lock, User } from "lucide-react";
+import { Shield, Mail, Lock, User, ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import api from "../services/api";
 import { useAuth } from "../context/AuthContext";
 
@@ -37,121 +37,99 @@ const Register = () => {
   };
 
   return (
-    <div
-      className="min-h-screen flex"
-      style={{ background: "var(--color-background)" }}
-    >
-      {/* Left Panel – Decorative */}
-      <div
-        className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12"
-        style={{
-          background:
-            "linear-gradient(135deg, #10B981 0%, #059669 60%, #047857 100%)",
-        }}
-      >
+    <div className="min-h-screen flex bg-background text-text overflow-hidden relative">
+      {/* Background Ambient Orbs */}
+      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+
+      {/* Left Panel – Brand/Decorative */}
+      <div className="hidden lg:flex lg:w-[45%] flex-col justify-between p-12 xl:p-16 relative z-10 border-r border-muted/10 bg-surface/30 backdrop-blur-sm">
         <div className="flex items-center space-x-3">
-          <div className="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
-            <Shield className="h-7 w-7 text-white" />
+          <div className="bg-primary p-2.5 rounded-xl shadow-lg shadow-primary/20">
+            <Shield className="h-6 w-6 text-background" />
           </div>
-          <span className="text-white font-bold text-xl tracking-tight">
-            CloudGuardian AI
+          <span className="text-text font-bold text-2xl tracking-wide uppercase">
+            CloudGuardian
           </span>
         </div>
 
-        <div>
-          <h1 className="text-4xl font-extrabold text-white leading-tight mb-4">
+        <div className="max-w-md">
+          <h1 className="text-5xl xl:text-6xl font-serif text-text leading-tight mb-6">
             Start optimizing
             <br />
-            your cloud today.
+            <span className="text-primary italic">your cloud today.</span>
           </h1>
-          <p className="text-emerald-100 text-lg leading-relaxed">
-            Join thousands of engineers and FinOps teams who trust CloudGuardian
-            AI to reduce AWS costs and improve cloud security.
+          <p className="text-muted text-lg leading-relaxed mb-12">
+            Join thousands of engineers and FinOps teams who trust CloudGuardian AI to reduce AWS costs and improve cloud security seamlessly.
           </p>
 
-          <div className="mt-10 space-y-4">
-            {[
-              "Real-time Cloud Scanning",
-              "AI-Generated Remediation",
-              "MongoDB-backed History",
-            ].map((f) => (
-              <div key={f} className="flex items-center space-x-3">
-                <div className="w-2 h-2 rounded-full bg-white" />
-                <span className="text-white font-medium">{f}</span>
+          <div className="space-y-6">
+            <div className="flex items-center space-x-4">
+              <div className="w-10 h-10 rounded-full bg-surface border border-muted/20 flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-5 h-5 text-primary" />
               </div>
-            ))}
+              <span className="text-text font-medium text-lg">Deterministic IAM Security</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="w-10 h-10 rounded-full bg-surface border border-muted/20 flex items-center justify-center shrink-0">
+                <Zap className="w-5 h-5 text-secondary" />
+              </div>
+              <span className="text-text font-medium text-lg">Instant FinOps Rule Engine</span>
+            </div>
           </div>
         </div>
 
-        <p className="text-emerald-200 text-sm">
+        <p className="text-muted text-sm font-medium tracking-wide">
           &copy; {new Date().getFullYear()} CloudGuardian AI
         </p>
       </div>
 
       {/* Right Panel – Form */}
-      <div className="flex flex-1 flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-28">
-        <div className="w-full max-w-md mx-auto">
+      <div className="flex flex-1 flex-col justify-center items-center px-6 sm:px-12 relative z-10">
+        <div className="w-full max-w-[420px]">
           {/* Mobile logo */}
-          <div className="flex lg:hidden items-center space-x-2 mb-10">
-            <div
-              className="p-2 rounded-xl"
-              style={{ background: "var(--color-primary)" }}
-            >
-              <Shield className="h-6 w-6 text-white" />
+          <div className="flex lg:hidden items-center justify-center space-x-3 mb-12">
+            <div className="bg-primary p-2.5 rounded-xl shadow-lg shadow-primary/20">
+              <Shield className="h-6 w-6 text-background" />
             </div>
-            <span
-              className="font-bold text-xl"
-              style={{ color: "var(--color-text)" }}
-            >
-              CloudGuardian AI
+            <span className="text-text font-bold text-2xl tracking-wide uppercase">
+              CloudGuardian
             </span>
           </div>
 
-          <h2
-            className="text-3xl font-extrabold tracking-tight mb-2"
-            style={{ color: "var(--color-text)" }}
-          >
-            Create your account
-          </h2>
-          <p className="text-sm mb-8" style={{ color: "var(--color-muted)" }}>
-            Already have an account?{" "}
-            <Link
-              to="/login"
-              className="font-semibold hover:underline"
-              style={{ color: "var(--color-primary)" }}
-            >
-              Sign in instead
-            </Link>
-          </p>
+          <div className="mb-10 text-center lg:text-left">
+            <h2 className="text-4xl font-serif text-text mb-3">
+              Create your account
+            </h2>
+            <p className="text-muted text-base">
+              Already have an account?{" "}
+              <Link
+                to="/login"
+                className="text-primary font-semibold hover:text-secondary transition-colors"
+              >
+                Sign in instead
+              </Link>
+            </p>
+          </div>
 
           {error && (
-            <div
-              className="mb-6 p-4 rounded-xl text-sm"
-              style={{
-                background: "#FEF2F2",
-                border: "1px solid #FECACA",
-                color: "#DC2626",
-              }}
-            >
+            <div className="mb-6 p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium flex items-center animate-in fade-in slide-in-from-top-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-red-400 mr-3" />
               {error}
             </div>
           )}
 
-          <form className="space-y-5" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="fullName"
-                className="block text-sm font-semibold mb-1.5"
-                style={{ color: "var(--color-text)" }}
+                className="block text-sm font-semibold text-text mb-2 tracking-wide uppercase"
               >
                 Full Name
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                  <User
-                    className="h-4 w-4"
-                    style={{ color: "var(--color-muted)" }}
-                  />
+              <div className="relative group">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-primary text-muted">
+                  <User className="h-5 w-5" />
                 </div>
                 <input
                   id="fullName"
@@ -160,18 +138,7 @@ const Register = () => {
                   required
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="block w-full pl-10 pr-4 py-3 rounded-xl text-sm transition-all outline-none"
-                  style={{
-                    background: "var(--color-surface)",
-                    border: "1.5px solid var(--color-muted)",
-                    color: "var(--color-text)",
-                  }}
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "var(--color-primary)")
-                  }
-                  onBlur={(e) =>
-                    (e.target.style.borderColor = "var(--color-muted)")
-                  }
+                  className="block w-full pl-12 pr-4 py-3.5 bg-surface/50 border border-muted/20 rounded-xl text-base text-text placeholder:text-muted/50 transition-all outline-none focus:border-primary focus:bg-surface focus:ring-1 focus:ring-primary/50"
                   placeholder="John Doe"
                 />
               </div>
@@ -180,17 +147,13 @@ const Register = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold mb-1.5"
-                style={{ color: "var(--color-text)" }}
+                className="block text-sm font-semibold text-text mb-2 tracking-wide uppercase"
               >
                 Email address
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                  <Mail
-                    className="h-4 w-4"
-                    style={{ color: "var(--color-muted)" }}
-                  />
+              <div className="relative group">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-primary text-muted">
+                  <Mail className="h-5 w-5" />
                 </div>
                 <input
                   id="email"
@@ -200,18 +163,7 @@ const Register = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full pl-10 pr-4 py-3 rounded-xl text-sm transition-all outline-none"
-                  style={{
-                    background: "var(--color-surface)",
-                    border: "1.5px solid var(--color-muted)",
-                    color: "var(--color-text)",
-                  }}
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "var(--color-primary)")
-                  }
-                  onBlur={(e) =>
-                    (e.target.style.borderColor = "var(--color-muted)")
-                  }
+                  className="block w-full pl-12 pr-4 py-3.5 bg-surface/50 border border-muted/20 rounded-xl text-base text-text placeholder:text-muted/50 transition-all outline-none focus:border-primary focus:bg-surface focus:ring-1 focus:ring-primary/50"
                   placeholder="you@example.com"
                 />
               </div>
@@ -220,17 +172,13 @@ const Register = () => {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-semibold mb-1.5"
-                style={{ color: "var(--color-text)" }}
+                className="block text-sm font-semibold text-text mb-2 tracking-wide uppercase"
               >
                 Password
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                  <Lock
-                    className="h-4 w-4"
-                    style={{ color: "var(--color-muted)" }}
-                  />
+              <div className="relative group">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-primary text-muted">
+                  <Lock className="h-5 w-5" />
                 </div>
                 <input
                   id="password"
@@ -240,18 +188,7 @@ const Register = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full pl-10 pr-4 py-3 rounded-xl text-sm transition-all outline-none"
-                  style={{
-                    background: "var(--color-surface)",
-                    border: "1.5px solid var(--color-muted)",
-                    color: "var(--color-text)",
-                  }}
-                  onFocus={(e) =>
-                    (e.target.style.borderColor = "var(--color-primary)")
-                  }
-                  onBlur={(e) =>
-                    (e.target.style.borderColor = "var(--color-muted)")
-                  }
+                  className="block w-full pl-12 pr-4 py-3.5 bg-surface/50 border border-muted/20 rounded-xl text-base text-text placeholder:text-muted/50 transition-all outline-none focus:border-primary focus:bg-surface focus:ring-1 focus:ring-primary/50"
                   placeholder="••••••••"
                   minLength={6}
                 />
@@ -261,14 +198,12 @@ const Register = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 px-4 rounded-xl font-semibold text-sm text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed mt-2 shadow-md"
-              style={{
-                background: loading
-                  ? "var(--color-muted)"
-                  : "var(--color-primary)",
-              }}
+              className="group relative w-full flex items-center justify-center gap-2 py-4 px-6 bg-primary hover:bg-secondary text-background font-semibold text-sm tracking-[0.1em] uppercase rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-primary/20 overflow-hidden mt-4"
             >
-              {loading ? "Creating account..." : "Create account"}
+              <span className="relative z-10 flex items-center gap-2">
+                {loading ? "Creating account..." : "Create account"}
+                {!loading && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
+              </span>
             </button>
           </form>
         </div>

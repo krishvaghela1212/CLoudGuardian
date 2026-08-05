@@ -119,7 +119,7 @@ const Copilot = () => {
                 <div
                   className={`px-4 py-3 rounded-2xl ${
                     msg.role === "user"
-                      ? "bg-primary text-white rounded-tr-sm"
+                      ? "bg-primary text-background dark:text-primary rounded-tr-sm"
                       : "bg-surface border border-muted/20 text-text rounded-tl-sm"
                   }`}
                 >

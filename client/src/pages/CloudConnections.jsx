@@ -296,7 +296,7 @@ const CreateModal = ({ onClose, onSaved }) => {
             <button
               onClick={handleSave}
               disabled={saving || testing}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white transition-all disabled:opacity-50"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-background dark:text-primary transition-all disabled:opacity-50"
               style={{ background: 'var(--color-primary)' }}
             >
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
@@ -399,7 +399,7 @@ const CloudConnections = () => {
             </button>
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white transition-all shadow-md"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-background dark:text-primary transition-all shadow-md"
               style={{ background: 'var(--color-primary)' }}
             >
               <Plus className="w-4 h-4" />
@@ -471,7 +471,7 @@ const CloudConnections = () => {
             </p>
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-background dark:text-primary"
               style={{ background: 'var(--color-primary)' }}
             >
               <Plus className="w-4 h-4" />
@@ -556,7 +556,7 @@ const CloudConnections = () => {
                   <button
                     onClick={() => navigate('/scanner', { state: { connectionId: conn._id, connectionName: conn.name } })}
                     title="Scan this connection"
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white transition-all"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-background dark:text-primary transition-all"
                     style={{ background: 'var(--color-primary)' }}
                   >
                     Scan

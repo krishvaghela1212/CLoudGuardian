@@ -160,20 +160,20 @@ const Scanner = () => {
           Back to Dashboard
         </button>
 
-        <div className="bg-surface rounded-2xl border border-muted/20 shadow-xl overflow-hidden">
+        <div className="bg-surface rounded border border-primary/10 dark:border-accent/10 shadow-xl overflow-hidden">
           {/* Header */}
-          <div className="p-6 border-b border-muted/20 flex flex-col md:flex-row justify-between items-start md:items-center bg-surface/50 gap-4">
-            <div className="flex items-center space-x-3">
-              <Shield className="w-8 h-8 text-primary" />
+          <div className="p-8 border-b border-primary/10 dark:border-accent/10 flex flex-col md:flex-row justify-between items-start md:items-center bg-surface/50 gap-4">
+            <div className="flex items-center space-x-4">
+              <Shield className="w-8 h-8 text-primary dark:text-accent stroke-[1.5]" />
               <div>
-                <h2 className="text-xl font-bold">
-                  Cloud Infrastructure Scanner
+                <h2 className="text-3xl font-serif text-text">
+                  Infrastructure Scanner
                 </h2>
-                <div className="flex items-center mt-1 space-x-2">
+                <div className="flex items-center mt-2 space-x-2">
                   <div
-                    className={`w-2 h-2 rounded-full ${isConnected ? "bg-green-500" : "bg-red-500 animate-pulse"}`}
+                    className={`w-2 h-2 rounded-full ${isConnected ? "bg-primary dark:bg-accent" : "bg-red-500 animate-pulse"}`}
                   />
-                  <span className="text-sm text-muted">
+                  <span className="text-sm font-light tracking-wide text-muted">
                     {isConnected
                       ? "Connected to Server"
                       : "Disconnected - Reconnecting..."}
@@ -190,7 +190,7 @@ const Scanner = () => {
                   scanStatus === "scanning" ||
                   !selectedConnectionId
                 }
-                className="w-full md:w-auto px-6 py-2.5 bg-primary hover:bg-accent disabled:bg-muted/10 disabled:text-muted disabled:cursor-not-allowed rounded-lg font-medium text-white transition-all shadow-lg shadow-primary/20"
+                className="w-full md:w-auto px-8 py-3 bg-primary text-background dark:bg-accent dark:text-primary disabled:bg-muted/10 disabled:text-muted disabled:cursor-not-allowed font-medium text-sm tracking-[0.1em] uppercase transition-all shadow-lg shadow-primary/10"
               >
                 {scanStatus === "scanning"
                   ? "Scan in Progress..."
@@ -201,20 +201,20 @@ const Scanner = () => {
             </div>
           </div>
 
-          <div className="p-8">
-            <div className="mb-8 rounded-3xl border border-muted/10 bg-surface/80 p-5 shadow-sm">
-              <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div className="p-10">
+            <div className="mb-10 border-l-2 border-primary/40 dark:border-accent/40 bg-primary/5 dark:bg-accent/5 p-6">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <p className="text-sm font-semibold text-text">
+                  <p className="text-lg font-serif text-text">
                     Ready to scan your AWS infrastructure?
                   </p>
-                  <p className="mt-2 text-sm text-muted leading-relaxed">
+                  <p className="mt-2 text-sm text-muted leading-relaxed font-light">
                     Select a connection and press Start Scan to analyze EC2, S3,
                     RDS, and Lambda resources. Scan progress updates appear in
                     real time.
                   </p>
                 </div>
-                <div className="inline-flex items-center justify-center rounded-full bg-secondary/10 px-4 py-2 text-sm font-semibold text-secondary">
+                <div className="inline-flex items-center justify-center border border-primary/20 dark:border-accent/20 px-4 py-2 text-xs font-medium tracking-[0.1em] uppercase text-primary dark:text-accent">
                   {scanStatus === "idle"
                     ? "Awaiting scan"
                     : scanStatus === "scanning"
@@ -227,7 +227,7 @@ const Scanner = () => {
             </div>
 
             {/* Connection Selector */}
-            <div className="mb-8 p-4 rounded-xl border border-muted/20 bg-background/50">
+            <div className="mb-10 p-6 border border-primary/10 dark:border-accent/10 bg-surface/50">
               <label className="block text-sm font-semibold mb-2 text-muted uppercase tracking-wide">
                 Target Cloud Connection
               </label>
@@ -275,7 +275,7 @@ const Scanner = () => {
                         scanStatus === "scanning" ||
                         !selectedConnectionId
                       }
-                      className="w-full px-5 py-3 bg-primary hover:bg-accent disabled:bg-muted/10 disabled:text-muted disabled:cursor-not-allowed rounded-xl font-semibold text-white transition-all shadow-lg shadow-primary/20"
+                      className="w-full px-5 py-3 bg-primary text-background dark:bg-accent dark:text-primary hover:opacity-90 disabled:bg-muted/10 disabled:text-muted disabled:cursor-not-allowed rounded uppercase tracking-[0.1em] font-medium transition-all shadow-lg shadow-primary/10"
                     >
                       {scanStatus === "scanning"
                         ? "Scan in Progress..."
@@ -283,7 +283,7 @@ const Scanner = () => {
                           ? "Run Another Scan"
                           : "Start Scan"}
                     </button>
-                    <p className="mt-2 text-xs text-muted">
+                    <p className="mt-2 text-xs text-muted font-light">
                       Choose a connection and press Start Scan to begin.
                     </p>
                   </div>

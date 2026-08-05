@@ -177,7 +177,7 @@ const Dashboard = () => {
               </button>
               <button
                 onClick={() => navigate("/scanner")}
-                className="hidden sm:inline-flex items-center px-3 py-2 bg-primary hover:bg-accent text-text rounded-lg text-sm font-medium shadow-lg shadow-primary/20 transition-colors"
+                className="hidden sm:inline-flex items-center px-3 py-2 bg-primary hover:bg-accent text-background dark:bg-accent dark:text-primary rounded-lg text-sm font-medium shadow-lg shadow-primary/20 transition-colors"
               >
                 <Activity className="h-4 w-4 mr-2" />
                 New Scan
@@ -226,7 +226,7 @@ const Dashboard = () => {
             </p>
             <button
               onClick={() => navigate("/scanner")}
-              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-accent text-text rounded-xl font-medium shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center px-6 py-3 bg-primary hover:bg-accent text-background dark:bg-accent dark:text-primary rounded-xl font-medium shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5"
             >
               <Activity className="w-5 h-5 mr-2" />
               Run Your First Scan

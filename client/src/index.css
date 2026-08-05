@@ -1,34 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  /* Light Mode (White / Mint Green) */
-  --color-background: #FFFFFF;
-  --color-surface: #F8FAFC;
-  --color-primary: #10B981;
-  --color-secondary: #34D399;
-  --color-accent: #059669;
-  --color-warning: #F59E0B;
-  --color-critical: #EF4444;
-  --color-text: #0F172A;
-  --color-muted: #64748B;
+@theme {
+  --color-background: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-warning: var(--color-warning);
+  --color-critical: var(--color-critical);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-muted);
 }
 
-.dark {
-  /* Dark Mode (Dark / Mint Green) */
-  --color-background: #0B0F14;
-  --color-surface: #111827;
-  --color-primary: #34D399;
-  --color-secondary: #10B981;
-  --color-accent: #6EE7B7;
+:root {
+  /* Universal Green + Beige Theme */
+  --color-bg: #173324; /* Deep Forest Green */
+  --color-surface: #0E1F15; /* Almost Black Green */
+  --color-primary: #F5F3EB; /* Elegant cream / beige */
+  --color-secondary: #D9D0B4; /* Elegant Beige/Gold */
+  --color-accent: #2B4E38; /* Lighter Green Accent */
   --color-warning: #F59E0B;
   --color-critical: #EF4444;
-  --color-text: #F8FAFC;
-  --color-muted: #94A3B8;
+  --color-text: #F5F3EB; /* Cream */
+  --color-muted: #A3B1A8;
 }
 
 @layer base {
   body {
-    background-color: var(--color-background);
+    background-color: var(--color-bg);
     color: var(--color-text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

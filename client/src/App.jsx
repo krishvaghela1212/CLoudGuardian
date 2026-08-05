@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
-import ThemeToggle from "./components/ThemeToggle";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
@@ -23,7 +22,6 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <Router>
-          <ThemeToggle />
           <Routes>
             <Route path="/" element={<Navigate to="/landing" replace />} />
             <Route path="/login" element={<Login />} />
