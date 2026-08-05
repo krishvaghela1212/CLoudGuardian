@@ -7,6 +7,7 @@ const authRoutes = require('./src/routes/auth.routes');
 const awsRoutes = require('./src/routes/aws.routes');
 const copilotRoutes = require('./src/routes/copilot.routes');
 const reportRoutes = require('./src/routes/report.routes');
+const cloudConnectionRoutes = require('./src/routes/cloudConnection.routes');
 const logger = require('./src/utils/logger');
 
 // Connect to database
@@ -25,6 +26,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/aws', awsRoutes);
 app.use('/api/copilot', copilotRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/cloud-connections', cloudConnectionRoutes);
 
 // Health check route
 app.get('/', (req, res) => {

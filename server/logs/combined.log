@@ -231,3 +231,23 @@
 2026-07-15 19:20:45 [[32minfo[39m]: [RuleEngine] Loaded rule: RDS_OVERSIZED
 2026-07-15 19:20:45 [[32minfo[39m]: [RuleEngine] Loaded rule: S3_NO_LIFECYCLE
 2026-07-15 19:20:45 [[32minfo[39m]: [RuleEngine] 8 rules loaded successfully
+2026-08-05 19:36:53 [[32minfo[39m]: [CloudConnection] Created connection "AWS account 1 connection" for user 6a7338deef214a6425d75612
+2026-08-05 19:36:56 [[32minfo[39m]: [CloudConnection] Testing connection "AWS account 1 connection" (arn:aws:iam::456051252825:role/CloudGuardianReadOnlyRole)
+2026-08-05 19:36:56 [[32minfo[39m]: Assuming IAM role
+2026-08-05 19:36:57 [[32minfo[39m]: Role assumed successfully
+2026-08-05 19:36:58 [[32minfo[39m]: [CloudConnection] Test PASSED for "AWS account 1 connection": AccountId=456051252825
+2026-08-05 19:37:02 [[31merror[39m]: [CloudConnection Controller] createConnection: A connection named "AWS account 1 connection " already exists for this account.
+2026-08-05 19:37:18 [[32minfo[39m]: [CloudConnection] Created connection "Krish_AWS_1" for user 6a7338deef214a6425d75612
+2026-08-05 19:44:09 [[32minfo[39m]: Assuming IAM role
+2026-08-05 19:44:09 [[32minfo[39m]: Role assumed successfully
+2026-08-05 19:44:11 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1785939249693 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-08-05 19:44:11 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1785939249693 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: CW_LONG_RETENTION
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: EBS_UNATTACHED
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: EC2_LOW_CPU
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: EC2_STOPPED
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: EIP_UNUSED
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: LAMBDA_UNUSED
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: RDS_OVERSIZED
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] Loaded rule: S3_NO_LIFECYCLE
+2026-08-05 19:44:11 [[32minfo[39m]: [RuleEngine] 8 rules loaded successfully
