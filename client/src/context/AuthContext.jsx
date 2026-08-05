@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import api from '../services/api';
+import React, { createContext, useContext, useState, useEffect } from "react";
+import api from "../services/api";
 
 const AuthContext = createContext(undefined);
 
@@ -9,14 +9,14 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const checkLoggedIn = async () => {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem("token");
       if (token) {
         try {
-          const res = await api.get('/auth/me');
+          const res = await api.get("/api/auth/me");
           setUser(res.data.data);
         } catch (error) {
-          console.error('Auth verification failed', error);
-          localStorage.removeItem('token');
+          console.error("Auth verification failed", error);
+          localStorage.removeItem("token");
         }
       }
       setLoading(false);
@@ -26,12 +26,12 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (token, userData) => {
-    localStorage.setItem('token', token);
+    localStorage.setItem("token", token);
     setUser(userData);
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     setUser(null);
   };
 
@@ -45,7 +45,7 @@ export const AuthProvider = ({ children }) => {
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 };

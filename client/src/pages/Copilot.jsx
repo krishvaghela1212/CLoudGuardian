@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, Send, Bot, User, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import api from '../services/api';
+import React, { useState, useEffect, useRef } from "react";
+import { ArrowLeft, Send, Bot, User, Loader2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import api from "../services/api";
 
 const Copilot = () => {
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const navigate = useNavigate();
@@ -20,34 +20,39 @@ const Copilot = () => {
 
   const fetchHistory = async () => {
     try {
-      const res = await api.get('/copilot/history');
+      const res = await api.get("/api/copilot/history");
       setMessages(res.data.data);
     } catch (error) {
-      console.error('Failed to fetch chat history', error);
+      console.error("Failed to fetch chat history", error);
     }
   };
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    const userMessage = { role: 'user', content: input };
+    const userMessage = { role: "user", content: input };
     setMessages((prev) => [...prev, userMessage]);
-    setInput('');
+    setInput("");
     setIsLoading(true);
 
     try {
-      const res = await api.post('/copilot/ask', { question: userMessage.content });
+      const res = await api.post("/api/copilot/ask", {
+        question: userMessage.content,
+      });
       setMessages(res.data.data.messages);
     } catch (error) {
-      console.error('Failed to ask copilot', error);
+      console.error("Failed to ask copilot", error);
       setMessages((prev) => [
         ...prev,
-        { role: 'model', content: 'Sorry, I encountered an error. Please try again.' },
+        {
+          role: "model",
+          content: "Sorry, I encountered an error. Please try again.",
+        },
       ]);
     } finally {
       setIsLoading(false);
@@ -61,7 +66,7 @@ const Copilot = () => {
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center text-text">
             <button
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate("/dashboard")}
               className="mr-4 text-muted hover:text-text transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -81,9 +86,12 @@ const Copilot = () => {
           {messages.length === 0 && !isLoading && (
             <div className="text-center py-20">
               <Bot className="w-16 h-16 text-muted mx-auto mb-4" />
-              <h2 className="text-xl font-semibold text-muted mb-2">How can I help you optimize your cloud?</h2>
+              <h2 className="text-xl font-semibold text-muted mb-2">
+                How can I help you optimize your cloud?
+              </h2>
               <p className="text-muted max-w-md mx-auto">
-                Ask me  generate Terraform, AWS CLI commands, explain costs, or find security risks based on your latest scan.
+                Ask me generate Terraform, AWS CLI commands, explain costs, or
+                find security risks based on your latest scan.
               </p>
             </div>
           )}
@@ -91,18 +99,30 @@ const Copilot = () => {
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+              className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
             >
-              <div className={`flex max-w-[85%] sm:max-w-[75%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                <div className={`flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center ${msg.role === 'user' ? 'bg-primary ml-3' : 'bg-muted/10 mr-3'
-                  }`}>
-                  {msg.role === 'user' ? <User className="w-5 h-5 text-text" /> : <Bot className="w-5 h-5 text-secondary" />}
+              <div
+                className={`flex max-w-[85%] sm:max-w-[75%] ${msg.role === "user" ? "flex-row-reverse" : "flex-row"}`}
+              >
+                <div
+                  className={`flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center ${
+                    msg.role === "user" ? "bg-primary ml-3" : "bg-muted/10 mr-3"
+                  }`}
+                >
+                  {msg.role === "user" ? (
+                    <User className="w-5 h-5 text-text" />
+                  ) : (
+                    <Bot className="w-5 h-5 text-secondary" />
+                  )}
                 </div>
 
-                <div className={`px-4 py-3 rounded-2xl ${msg.role === 'user'
-                    ? 'bg-primary text-white rounded-tr-sm'
-                    : 'bg-surface border border-muted/20 text-text rounded-tl-sm'
-                  }`}>
+                <div
+                  className={`px-4 py-3 rounded-2xl ${
+                    msg.role === "user"
+                      ? "bg-primary text-white rounded-tr-sm"
+                      : "bg-surface border border-muted/20 text-text rounded-tl-sm"
+                  }`}
+                >
                   <div className="whitespace-pre-wrap leading-relaxed text-[15px]">
                     {msg.content}
                   </div>
@@ -119,7 +139,9 @@ const Copilot = () => {
                 </div>
                 <div className="px-5 py-4 rounded-2xl bg-surface border border-muted/20 text-text rounded-tl-sm flex items-center">
                   <Loader2 className="w-5 h-5 animate-spin text-secondary" />
-                  <span className="ml-3 text-muted text-sm font-medium">Analyzing infrastructure...</span>
+                  <span className="ml-3 text-muted text-sm font-medium">
+                    Analyzing infrastructure...
+                  </span>
                 </div>
               </div>
             </div>
@@ -136,7 +158,7 @@ const Copilot = () => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
+                if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
                   handleSubmit(e);
                 }
@@ -155,7 +177,8 @@ const Copilot = () => {
           </form>
           <div className="text-center mt-2">
             <span className="text-xs text-muted">
-              Copilot uses your latest scan data as context. Press Shift + Enter for a new line.
+              Copilot uses your latest scan data as context. Press Shift + Enter
+              for a new line.
             </span>
           </div>
         </div>

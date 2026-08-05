@@ -5,20 +5,20 @@ import api from './api';
  * @param {Object} payload - { name, accountId, roleArn, region, description }
  */
 export const createConnection = (payload) =>
-  api.post('/cloud-connections', payload);
+  api.post('/api/cloud-connections', payload);
 
 /**
  * Lists all cloud connections for the authenticated user.
  */
 export const listConnections = () =>
-  api.get('/cloud-connections');
+  api.get('/api/cloud-connections');
 
 /**
  * Gets a single cloud connection by ID.
  * @param {string} id
  */
 export const getConnection = (id) =>
-  api.get(`/cloud-connections/${id}`);
+  api.get(`/api/cloud-connections/${id}`);
 
 /**
  * Updates a cloud connection.
@@ -26,18 +26,18 @@ export const getConnection = (id) =>
  * @param {Object} payload
  */
 export const updateConnection = (id, payload) =>
-  api.put(`/cloud-connections/${id}`, payload);
+  api.put(`/api/cloud-connections/${id}`, payload);
 
 /**
  * Deletes a cloud connection by ID.
  * @param {string} id
  */
 export const deleteConnection = (id) =>
-  api.delete(`/cloud-connections/${id}`);
+  api.delete(`/api/cloud-connections/${id}`);
 
 /**
  * Tests a cloud connection (STS AssumeRole + GetCallerIdentity).
  * @param {string} id
  */
 export const testConnection = (id) =>
-  api.post(`/cloud-connections/${id}/test`);
+  api.post(`/api/cloud-connections/${id}/test`);
