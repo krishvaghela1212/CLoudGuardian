@@ -91,7 +91,7 @@ const Copilot = () => {
               </h2>
               <p className="text-muted max-w-md mx-auto">
                 Ask me generate Terraform, AWS CLI commands, explain costs, or
-                find security risks based on your latest scan.
+                find security risks
               </p>
             </div>
           )}
@@ -105,9 +105,8 @@ const Copilot = () => {
                 className={`flex max-w-[85%] sm:max-w-[75%] ${msg.role === "user" ? "flex-row-reverse" : "flex-row"}`}
               >
                 <div
-                  className={`flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center ${
-                    msg.role === "user" ? "bg-primary ml-3" : "bg-muted/10 mr-3"
-                  }`}
+                  className={`flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center ${msg.role === "user" ? "bg-primary ml-3" : "bg-muted/10 mr-3"
+                    }`}
                 >
                   {msg.role === "user" ? (
                     <User className="w-5 h-5 text-text" />
@@ -117,11 +116,10 @@ const Copilot = () => {
                 </div>
 
                 <div
-                  className={`px-4 py-3 rounded-2xl ${
-                    msg.role === "user"
+                  className={`px-4 py-3 rounded-2xl ${msg.role === "user"
                       ? "bg-primary text-background dark:text-primary rounded-tr-sm"
                       : "bg-surface border border-muted/20 text-text rounded-tl-sm"
-                  }`}
+                    }`}
                 >
                   <div className="whitespace-pre-wrap leading-relaxed text-[15px]">
                     {msg.content}
