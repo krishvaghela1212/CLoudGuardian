@@ -117,8 +117,8 @@ const Copilot = () => {
 
                 <div
                   className={`px-4 py-3 rounded-2xl ${msg.role === "user"
-                      ? "bg-primary text-background dark:text-primary rounded-tr-sm"
-                      : "bg-surface border border-muted/20 text-text rounded-tl-sm"
+                    ? "bg-primary text-background dark:text-primary rounded-tr-sm"
+                    : "bg-surface border border-muted/20 text-text rounded-tl-sm"
                     }`}
                 >
                   <div className="whitespace-pre-wrap leading-relaxed text-[15px]">
@@ -176,7 +176,7 @@ const Copilot = () => {
           <div className="text-center mt-2">
             <span className="text-xs text-muted">
               Copilot uses your latest scan data as context. Press Shift + Enter
-              for a new line.
+              .
             </span>
           </div>
         </div>
