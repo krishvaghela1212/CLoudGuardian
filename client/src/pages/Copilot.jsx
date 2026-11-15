@@ -175,7 +175,7 @@ const Copilot = () => {
           </form>
           <div className="text-center mt-2">
             <span className="text-xs text-muted">
-              Copilot uses your latest scan data as context. Press Shift + Enter
+              Copilot uses your latest scan data as context. Press Shift + Enterrr
               .
             </span>
           </div>
