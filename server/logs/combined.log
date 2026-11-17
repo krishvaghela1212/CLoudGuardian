@@ -290,3 +290,40 @@
 2026-08-24 12:12:34 [[32minfo[39m]: [RuleEngine] Loaded rule: RDS_OVERSIZED
 2026-08-24 12:12:34 [[32minfo[39m]: [RuleEngine] Loaded rule: S3_NO_LIFECYCLE
 2026-08-24 12:12:34 [[32minfo[39m]: [RuleEngine] 8 rules loaded successfully
+2026-11-14 16:55:55 [[31merror[39m]: [Groq Service] Copilot failed: 401 Invalid API Key
+2026-11-14 16:55:55 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-14 16:56:19 [[31merror[39m]: [Groq Service] Copilot failed: 401 Invalid API Key
+2026-11-14 16:56:19 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-14 16:56:24 [[31merror[39m]: [Groq Service] Copilot failed: 401 Invalid API Key
+2026-11-14 16:56:24 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-17 10:36:32 [[32minfo[39m]: [CloudConnection] Created connection "RIYA Testing" for user 6af8449347060ecf7a34c6ab
+2026-11-17 10:36:35 [[32minfo[39m]: [CloudConnection] Testing connection "RIYA Testing" (arn:aws:iam::456051252825:role/CloudGuardianReadOnlyRole)
+2026-11-17 10:36:35 [[32minfo[39m]: Assuming IAM role
+2026-11-17 10:36:35 [[32minfo[39m]: Role assumed successfully
+2026-11-17 10:36:36 [[32minfo[39m]: [CloudConnection] Test PASSED for "RIYA Testing": AccountId=456051252825
+2026-11-17 10:36:40 [[31merror[39m]: [CloudConnection Controller] createConnection: A connection named "RIYA Testing " already exists for this account.
+2026-11-17 10:36:57 [[32minfo[39m]: [CloudConnection] Created connection "RIYA PRODUCTION" for user 6af8449347060ecf7a34c6ab
+2026-11-17 10:37:03 [[32minfo[39m]: [CloudConnection] Deleted connection "RIYA PRODUCTION" for user 6af8449347060ecf7a34c6ab
+2026-11-17 10:37:20 [[32minfo[39m]: Assuming IAM role
+2026-11-17 10:37:20 [[32minfo[39m]: Role assumed successfully
+2026-11-17 10:37:21 [[31merror[39m]: [RDS Service] getRDSInstances failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1794892040082 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-11-17 10:37:21 [[31merror[39m]: Scan RDS failed: User: arn:aws:sts::456051252825:assumed-role/CloudGuardianReadOnlyRole/CloudGuardianScan-1794892040082 is not authorized to perform: rds:DescribeDBInstances on resource: arn:aws:rds:ap-south-1:456051252825:db:* because no identity-based policy allows the rds:DescribeDBInstances action
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: CW_LONG_RETENTION
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: EBS_UNATTACHED
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: EC2_LOW_CPU
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: EC2_STOPPED
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: EIP_UNUSED
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: LAMBDA_UNUSED
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: RDS_OVERSIZED
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] Loaded rule: S3_NO_LIFECYCLE
+2026-11-17 10:37:21 [[32minfo[39m]: [RuleEngine] 8 rules loaded successfully
+2026-11-17 10:38:13 [[31merror[39m]: [Groq Service] Copilot failed: 401 Invalid API Key
+2026-11-17 10:38:13 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-17 10:38:34 [[31merror[39m]: [Groq Service] Copilot failed: 401 Invalid API Key
+2026-11-17 10:38:34 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-17 10:45:49 [[31merror[39m]: [Groq Service] Copilot failed: 404 The model `llama-3.1-8b-instant` does not exist or you do not have access to it.
+2026-11-17 10:45:49 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-17 10:46:09 [[31merror[39m]: [Groq Service] Copilot failed: 404 The model `llama-3.1-8b-instant` does not exist or you do not have access to it.
+2026-11-17 10:46:09 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
+2026-11-17 10:56:06 [[31merror[39m]: [Groq Service] Copilot failed: 404 The model `llama-3.1-8b-instant` does not exist or you do not have access to it.
+2026-11-17 10:56:06 [[31merror[39m]: [Copilot Controller] askQuestion error: Failed to communicate with AI Copilot.
