@@ -1,0 +1,31 @@
+
+services:
+
+  # Backend service
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: cloudguardian-server
+    env_file:
+      - ./server/.env
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  # Frontend service
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: http://localhost:5000
+    container_name: cloudguardian-client
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+    restart: unless-stopped
