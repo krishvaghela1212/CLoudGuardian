@@ -133,7 +133,7 @@ INSTRUCTIONS:
     messages.push({ role: 'user', content: question });
 
     const response = await getClient().chat.completions.create({
-      model: 'llama-3.1-8b-instant',
+      model: 'openai/gpt-oss-120b',
       messages,
       temperature: 0.7
     });
